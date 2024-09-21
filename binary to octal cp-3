@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int binary,decimal=0,base=1;
+	printf("enter binary numbers : ");
+	scanf("%d",&binary);
+	int n=binary;
+	while(n>0){
+		decimal+=n%10*base;
+		n/=10;
+		base*=2;
+	}
+	printf("octal numbers : %o ",decimal);
+	return 0;
+}
