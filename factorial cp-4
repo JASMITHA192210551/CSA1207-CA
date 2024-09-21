@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+	int n=7,fact=1,i;
+	for(i=1;i<=n;i++){
+		fact*=i;
+	}
+	printf("factorial of 7 : %d ",fact);
+	return 0;
+}
