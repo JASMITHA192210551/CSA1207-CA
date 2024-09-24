@@ -1,0 +1,23 @@
+#include <stdio.h>
+int cycleCount = 0; 
+void fetch() {
+    printf("Fetch stage complete.\n");
+    cycleCount++;
+}
+int execute(int A, int B) {
+	printf("execute stage complete.\n");
+    cycleCount++;
+    return A - B;
+}
+int main() {
+    int A, B;
+    printf("Enter A: ");
+    scanf("%d", &A);
+    printf("Enter B: ");
+    scanf("%d", &B);   
+    fetch();
+    int result = execute(A, B);
+    printf("Addition result: %d\n", result);
+    printf("Total clock cycles: %d\n", cycleCount); 
+    return 0;
+}
